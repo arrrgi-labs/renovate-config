@@ -1,0 +1,48 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    ":approveMajorUpdates",
+    ":configMigration",
+    ":dependencyDashboard",
+    ":enableRenovate",
+    ":gitSignOff",
+    ":ignoreModulesAndTests",
+    ":ignoreUnstable",
+    ":maintainLockFilesWeekly",
+    ":pinSkipCi",
+    ":renovatePrefix",
+    ":semanticCommits",
+    ":semanticPrefixChore",
+    "docker:pinDigests",
+    "group:monorepos",
+    "helpers:pinGitHubActionDigests",
+    "schedule:autoMergeOfficeHours",
+    "schedule:officeHours",
+    "workarounds:all"
+  ],
+  "automergeType": "pr",
+  "commitBodyTable": true,
+  "labels": ["dependencies"],
+  "prCreation": "immediate",
+  "prHourlyLimit": 3,
+  "rangeStrategy": "bump",
+  "schedule": "every weekday",
+  "separateMinorPatch": true,
+  "minimumReleaseAge": "3 days",
+  "minimumReleaseAgeBehaviour": "timestamp-optional",
+  "rebaseWhen": "behind-base-branch",
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": true
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "labels": ["security"]
+  }
+}

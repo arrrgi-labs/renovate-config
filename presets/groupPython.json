@@ -1,0 +1,24 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "enabledManagers": [
+    "devcontainer",
+    "github-actions",
+    "pep621",
+    "pyenv"
+  ],
+  "packageRules": [
+    {
+      "matchManagers": [
+        "devcontainer",
+        "github-actions",
+        "pep621",
+        "pyenv"
+      ],
+      "description": "Group all Python version updates together",
+      "matchPackageNames": ["**/python"],
+      "matchJsonata": ["isBreaking != true"],
+      "groupName": "Project Python version",
+      "groupSlug": "project-python-version"
+    }
+  ]
+}
