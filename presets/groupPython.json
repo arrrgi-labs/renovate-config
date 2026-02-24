@@ -14,12 +14,9 @@
         "pep621",
         "pyenv"
       ],
-      "description": "Group all Python version updates together",
+      "description": "Restrict Python versions to the current minor release only and group all updates together",
       "matchPackageNames": [
         "/(^|\\/)python$/"
-      ],
-      "matchJsonata": [
-        "isBreaking != true"
       ],
       "groupName": "Project Python version",
       "groupSlug": "project-python-version"
