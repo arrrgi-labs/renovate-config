@@ -15,8 +15,12 @@
         "pyenv"
       ],
       "description": "Group all Python version updates together",
-      "matchPackageNames": ["**/python"],
-      "matchJsonata": ["isBreaking != true"],
+      "matchPackageNames": [
+        "/(^|\\/)python$/"
+      ],
+      "matchJsonata": [
+        "isBreaking != true"
+      ],
       "groupName": "Project Python version",
       "groupSlug": "project-python-version"
     }
