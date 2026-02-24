@@ -16,7 +16,7 @@
     "docker:pinDigests",
     "group:monorepos",
     "helpers:pinGitHubActionDigests",
-    "schedule:autoMergeOfficeHours",
+    "schedule:automergeOfficeHours",
     "schedule:officeHours",
     "workarounds:all"
   ],
