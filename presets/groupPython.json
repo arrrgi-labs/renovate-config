@@ -16,7 +16,7 @@
       ],
       "description": "Restrict Python versions to the current minor release only and group all updates together",
       "matchPackageNames": [
-        "/(^|\\/)python$/"
+        "python"
       ],
       "groupName": "Project Python version",
       "groupSlug": "project-python-version"
